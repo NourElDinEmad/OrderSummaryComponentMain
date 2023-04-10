@@ -1,0 +1,128 @@
+/* Normalize */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Root */
+:root{
+  /* Primary */
+--pale-blue: hsl(225, 100%, 94%);
+--bright-blue: hsl(245, 75%, 52%);
+
+  /* Neutral */
+--very-pale-blue: hsl(225, 100%, 98%);
+--desaturated-blue: hsl(224, 23%, 55%);
+--dark-blue: hsl(223, 47%, 23%);
+}
+
+@font-face {
+  font-family: 'Red Hat Display';
+  src: url(font/RedHatDisplay-VariableFont_wght.ttf);
+}
+
+body{
+  font-family: 'Red Hat Display';
+}
+/* Page Style */
+main{
+  height: 97vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--pale-blue);
+  background-image: url(images/pattern-background-mobile.svg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 100% 25%;
+}
+section{
+  width: 350px;
+  text-align: center;
+  margin: 20px;
+  box-shadow: 0 0 10px;
+  border-radius: 10px;
+  background-color: white;
+}
+h1{
+  visibility: hidden;
+  position: absolute;
+}
+figure img{
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+.article{
+  padding: 0 20px;
+}
+.article>*{
+  margin: 15px 0;
+}
+.article>p{
+  font-weight: 500;
+  padding: 0 15px;
+  color: var(--desaturated-blue);
+}
+.article>div:first-of-type{
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--very-pale-blue);
+  border-radius: 10px;
+}
+.article div:first-of-type{
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+.article>div>p{
+  display: flex;
+  flex-direction: column;
+}
+.article>div p>span:first-child{
+  font-weight: 700;
+}
+.article>div p>span:last-child{
+  font-weight: 500;
+  color: var(--desaturated-blue);
+}
+.article a{
+  color: var(--bright-blue);
+  font-size: small;
+  font-weight: 700;
+}
+.article a:hover{
+  text-decoration: none;
+  color: var(--desaturated-blue);
+}
+button{
+  cursor: pointer;
+  padding: 15px 0;
+  margin: 5px 0;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  background-color: unset;
+  font-weight: 900;
+}
+div>button:first-of-type{
+  color: white;
+  background-color: var(--bright-blue);
+  box-shadow: 0 10px 15px 0px var(--desaturated-blue);
+}
+div>button:first-of-type:hover{
+  background-color: var(--desaturated-blue);
+}
+div>button:last-of-type{
+  color: var(--desaturated-blue);
+}
+div>button:last-of-type:hover{
+color: var(--dark-blue);
+}
+@media (min-width: 768px) {
+  main{
+    background-image: url(images/pattern-background-desktop.svg);
+  }
+}
